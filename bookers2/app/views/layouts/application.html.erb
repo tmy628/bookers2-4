@@ -9,21 +9,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
   <body>
-    <!-- header -->
-    <%= render partial: 'layouts/header' %>
-
-    <% if flash[:notice] %>
-      <div class="flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <!--ログイン・ログアウト・サインイン時にサクセスメッセージを表示-->
-    <%= yield %>
-
-    <!-- footer -->
-    <%= render partial: 'layouts/footer' %>
-    <!--部分テンプレートを呼び出せるように設定-->
+    <%= render 'layouts/header' %>
+      <main>
+        <p id="notice"><%= notice %></p>
+        <%= yield %>
+      </main>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

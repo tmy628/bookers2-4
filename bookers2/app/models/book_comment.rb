@@ -1,5 +1,4 @@
 class BookComment < ApplicationRecord
-
   belongs_to :user
   belongs_to :book
   # UserモデルとBookCommentモデルを関連付ける
